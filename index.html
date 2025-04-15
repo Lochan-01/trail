@@ -21,7 +21,7 @@
       color: white;
     }
 
-    /* Header and Navigation Styles */
+    
     .header {
       width: 100%;
       background-color: rgba(0, 0, 0, 0.6);
@@ -52,7 +52,6 @@
       color: rgb(81, 133, 244);
     }
 
-    /* Main Heading */
     .heading {
       margin-top: 120px; /* Added margin to prevent overlap with header */
       font-size: 6em;
@@ -92,22 +91,45 @@
       color: rgb(81, 133, 244);
       transform: scale(1.05);
     }
+
+    /* Section Styling */
+    .section {
+      display: none;
+      margin-top: 80px;
+      padding: 30px;
+      background: rgba(45, 36, 36, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    .active {
+      display: block;
+    }
+
   </style>
+  <script>
+    
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
 </head>
 <body>
 
-  <!-- Header with Navigation Bar -->
+  
   <div class="header">
     <nav>
-      <a href="#">About</a>
-      <a href="#">Events</a>
-      <a href="#">Schedule</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Register</a>
+      <a href="javascript:void(0);" onclick="showSection('about')">About</a>
+      <a href="javascript:void(0);" onclick="showSection('events')">Events</a>
+      <a href="javascript:void(0);" onclick="showSection('schedule')">Schedule</a>
+      <a href="javascript:void(0);" onclick="showSection('contact')">Contact Us</a>
     </nav>
   </div>
 
-  <!-- Main Content -->
+  
   <div class="heading">VIDYUTH</div>
   <h3>FEST ERA</h3>
 
@@ -115,6 +137,29 @@
     <h1>Choose Your Login</h1>
     <button class="login-option" onclick="location.href='cultural-login.html'">Cultural</button>
     <button class="login-option" onclick="location.href='sports-login.html'">Sports</button>
+  </div>
+
+  
+  <div id="about" class="section">
+    <h2>About VIDYUTH</h2>
+    <p>VIDYUTH is an annual cultural and sports festival held at our university, bringing together students from all over the country to participate in a wide range of activities. The festival aims to promote creativity, collaboration, and sportsmanship through various events and competitions. It is a platform where students showcase their talents and passions.</p>
+  </div>
+
+  
+  <div id="events" class="section">
+    <h2>Events</h2>
+    <p>VIDYUTH features a diverse range of events, including cultural performances, music and dance competitions, drama, debates, and more. Alongside cultural activities, the sports segment brings in various sporting events, from athletics to team sports. The events are designed to encourage participation, creativity, and healthy competition among students.</p>
+  </div>
+
+  <div id="schedule" class="section">
+    <h2>Event Schedule</h2>
+    <p>The festival runs over three days, with different events taking place throughout the day. The schedule includes performances, competitions, workshops, and special sessions with guest speakers. The full schedule will be available on the official festival website as the event date approaches, so participants can plan accordingly.</p>
+  </div>
+
+  
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>If you have any queries or require assistance, feel free to reach out to us. You can contact the VIDYUTH team via email at <a href="mailto:info@vidyuthfest.com" style="color: rgb(81, 133, 244);">info@vidyuthfest.com</a> or call us at +123 456 7890. We're here to help and ensure you have a great experience during the festival.</p>
   </div>
 
 </body>
