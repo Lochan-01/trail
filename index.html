@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VIDYUTH - Login Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('file_000000006b886230af27924575fd94bb_conversation_id=67fe3507-ec34-8006-bcf4-f7f7b129e67e&message_id=14e08f1c-0160-41fc-aa5c-f1ceb7cd7363 (1).PNG') no-repeat fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+    }
+
+    /* Header and Navigation Styles */
+    .header {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .header nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .header nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .header nav a:hover {
+      color: rgb(81, 133, 244);
+    }
+
+    /* Main Heading */
+    .heading {
+      margin-top: 120px; /* Added margin to prevent overlap with header */
+      font-size: 6em;
+      color: rgb(167, 173, 231);
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .container {
+      margin-top: 200px;
+      text-align: center;
+      background: rgba(45, 36, 36, 0.6);
+      padding: 50px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .container h1 {
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .login-option {
+      margin: 10px;
+      padding: 15px 40px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: white;
+      color: #080809;
+      transition: all 0.3s ease;
+    }
+
+    .login-option:hover {
+      background: #010101;
+      color: rgb(81, 133, 244);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Navigation Bar -->
+  <div class="header">
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Events</a>
+      <a href="#">Schedule</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Register</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="heading">VIDYUTH</div>
+  <h3>FEST ERA</h3>
+
+  <div class="container">
+    <h1>Choose Your Login</h1>
+    <button class="login-option" onclick="location.href='cultural-login.html'">Cultural</button>
+    <button class="login-option" onclick="location.href='sports-login.html'">Sports</button>
+  </div>
+
+</body>
+</html>
